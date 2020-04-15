@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+
+    <link rel="stylesheet" href="css/theme.css">
+
+    <!-- Import the style for modals -->
+    <link rel="stylesheet" href="css/modal.css">
+    <!-- Import the javascript for modals -->
+    <script type="module" src="js/modal.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio debitis, odio doloremque nihil ducimus voluptatibus eveniet, non molestiae quos eum officia aut adipisci beatae. Dicta, aut maxime. Facilis, fugit similique.</p>
+        <div class="center">
+            <button data-modal="myModal">Ouvrir la modale</button>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis culpa ad accusamus nemo laborum non omnis repudiandae tempore quia, odit ipsam corrupti, velit asperiores optio veritatis dolorum, ipsa assumenda ea.</p>
+    </div>
+    
+    <!-- Insert your modal here -->
+    <div class="modal" tabindex="-1" role="dialog" id="myModal" role="dialog">
+        <div class="modal-dialog" >
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, iusto assumenda mollitia non optio quam similique omnis ullam accusantium magni necessitatibus magnam pariatur facilis illo? Quaerat rem similique odit sint!</p>
+                    <p>Modal body text goes here.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="cancel" data-dismiss="modal">Close</button>
+                    <button type="button" class="validate">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

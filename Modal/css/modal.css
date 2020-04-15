@@ -1,0 +1,170 @@
+/* Import font families */
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+/* Configurations of the modal */
+:root {
+    /* Modal */
+    --modal-z-index: 10;
+    --modal-color-overlay: rgba(0,0,0, 0.3);
+    --modal-background-color: #fff;
+    --modal-border-radius: .3rem;
+    --modal-padding: 1rem;
+
+    /* Buttons */
+    --button-primary-background-color: #0062cc;
+    --button-secondary-background-color: #6c757d;
+}
+
+/* Modal */
+.modal {
+    z-index: var(--modal-z-index);
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    background-color: var(--modal-color-overlay);
+    overflow: hidden;
+    font-family: "Roboto", sans-serif;
+}
+
+/* Animations */
+.modal,
+.modal-dialog {
+    animation-duration: .3s;
+    animation-fill-mode: both;
+}
+
+.modal-open {
+    display: block;
+    animation-name: opacity_in;
+}
+
+.modal-closed {
+    display: block;
+    animation-name: opacity_out;
+}
+
+.modal-dialog {
+    width: 500px;
+    margin: auto;
+    margin-top: 50px;
+
+    background-color: var(--modal-background-color);
+    border-radius: var(--modal-border-radius);
+    border: 1px solid rgba(0,0,0,.2);
+}
+
+.modal-open .modal-dialog {
+    animation-name: slide_in;
+}
+
+.modal-closed .modal-dialog {
+    animation-name: slide_out;
+}
+
+/* Modal header */
+.modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    vertical-align: middle;
+    padding: var(--modal-padding);
+    border-bottom: 1px solid #dee2e6;
+}
+
+.modal-header .modal-title {
+    margin: 0;
+    margin-top: .3rem;;
+    line-height: 1.5;
+    font-weight: 500;
+    font-size: 1.25rem;
+}
+
+.modal-header .close {
+    padding: var(--modal-padding);
+    margin: -.3rem;
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: 400;
+    text-rendering: auto;
+    background-color: transparent;
+    border: 0;
+}
+
+.modal-header .close:hover {
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* Modal body */
+.modal-body {
+    padding: var(--modal-padding);
+
+    border-bottom: 1px solid #dee2e6;
+}
+
+/* Modal footer */
+.modal-footer {
+    padding: var(--modal-padding);
+    text-align: right;
+}
+
+/* Buttons */
+
+.modal-footer button  {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s
+}
+
+.modal-footer button:hover {
+    box-shadow: 0 0 0 0.2rem rgba(130,138,145,.5);
+}
+
+.modal-footer button.validate {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.modal-footer button.cancel {
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+/* Animations */
+@keyframes slide_in {
+  from { transform: translateY(-50px); }
+  to   { transform: translateY(0); }
+}
+@keyframes slide_out {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-50px); }
+}
+
+@keyframes opacity_in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@keyframes opacity_out {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
