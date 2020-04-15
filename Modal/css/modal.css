@@ -42,7 +42,7 @@
     animation-name: opacity_in;
 }
 
-.modal-closed {
+.modal-close {
     display: block;
     animation-name: opacity_out;
 }
@@ -61,7 +61,7 @@
     animation-name: slide_in;
 }
 
-.modal-closed .modal-dialog {
+.modal-close .modal-dialog {
     animation-name: slide_out;
 }
 

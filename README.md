@@ -9,3 +9,4 @@ The goal is to don't reinvent the wheel for each projects.
 The following list show you what is available :
 
 * Modal system
+* Image preview

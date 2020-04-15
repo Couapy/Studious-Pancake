@@ -2,6 +2,7 @@
  * @file This file contains the modal widget
  * @author Maël Marchand
  * @version 1.0
+ * @link https://github.com/Couapy/Studious-Pancake
  */
 
 class Modal {
@@ -112,10 +113,10 @@ class Modal {
     close() {
         this.closeCallback()
         // Hide the modal
-        this.modal.classList.add('modal-closed')
+        this.modal.classList.add('modal-close')
         this.modal.classList.remove('modal-open')
         let callback = (function () {
-            this.modal.classList.remove('modal-closed')
+            this.modal.classList.remove('modal-close')
         }).bind(this)
         setTimeout(callback, 500)
         // Remove event listeners
