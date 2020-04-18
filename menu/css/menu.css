@@ -1,0 +1,51 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+.menu-button {
+    --background-color: #f1f1f1;
+    --line-color: #333;
+
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--background-color);
+    cursor: pointer;
+}
+
+/* Add lines */
+.menu-button .row,
+.menu-button .row::before,
+.menu-button .row::after {
+    position: absolute;
+    width: 40px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: var(--line-color);
+    transition: all .2s ease-in-out;
+}
+.menu-button .row {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.menu-button .row::before {
+    content: '';
+    bottom: 10px;
+}
+.menu-button .row::after {
+    content: '';
+    top: 10px;
+}
+
+/* Button active */
+.menu-button.active .row {
+    background-color: transparent;
+}
+.menu-button.active .row::before {
+    transform: translateY(10px) rotate(45deg);
+}
+.menu-button.active .row::after {
+    transform: translateY(-10px) rotate(-45deg);
+}

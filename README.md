@@ -10,3 +10,5 @@ The following list show you what is available :
 
 * Modal system
 * Image preview
+* Loader
+* Menu button
