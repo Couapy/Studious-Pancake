@@ -1,0 +1,40 @@
+/* Your themes */
+[data-theme="light"] {
+    --color-theme: #f1f1f1;
+    --color: #333;
+    --background-color: #f1f1f1;
+}
+[data-theme="dark"] {
+    --color-theme: #333;
+    --color: #f1f1f1;
+    --background-color: #333;
+}
+
+/* Basic styles */
+* {
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: var(--background-color);
+}
+
+/* Button styles */
+.theme-switch-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+.theme-switch-button svg {
+    display: block;
+    width: 80px;
+    height: 80px;
+}
+.theme-switch-button svg path {
+    fill: var(--color);
+}

@@ -12,3 +12,4 @@ The following list show you what is available :
 * Image preview
 * Loader
 * Menu button
+* ThemeSwitcher
