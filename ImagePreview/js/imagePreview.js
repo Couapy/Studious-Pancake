@@ -64,7 +64,6 @@ class Viewer {
         this.legend.innerHTML = this.image.alt
 
         // Show the image preview
-        document.body.classList.add('noscroll')
         this.viewer.classList.add('image-preview-open')
         // Set event listener
         this.close_button.addEventListener('click', this.close)
@@ -81,7 +80,6 @@ class Viewer {
         this.viewer.classList.add('image-preview-close')
         this.viewer.classList.remove('image-preview-open')
         let callback = (function () {
-            document.body.classList.remove('noscroll')
             this.viewer.classList.remove('image-preview-close')
         }).bind(this)
         setTimeout(callback, 400)
