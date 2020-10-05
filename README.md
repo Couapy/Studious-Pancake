@@ -13,3 +13,4 @@ The following list show you what is available :
 * Loader
 * Menu button
 * ThemeSwitcher
+* Slider

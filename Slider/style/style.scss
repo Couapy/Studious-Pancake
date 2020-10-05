@@ -1,0 +1,107 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    scroll-behavior: smooth;
+    body {
+        position: relative;
+    }
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.slider {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide {
+    position: absolute;
+    top: 0px;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+    transition: opacity 1s ease-in-out;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(.84,-0.01,.52,1.03);
+
+    &.active {
+        left: 0;
+    }
+
+    &.sliding-left {
+        z-index: 5;
+        left: -100%;
+        animation-name: slidingLeftAnimation;
+    }
+
+    &.sliding-right {
+        z-index: 5;
+        left: 200%;
+        animation-name: slidingRightAnimation;
+    }
+
+    &.one {
+        background: #b1f8f2;
+    }
+
+    &.two {
+        background: #fffc99;
+    }
+
+    &.three {
+        background: #eafdcf;
+    }
+
+    &.four {
+        background: #8e8358;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    html, body {
+        overflow: auto;
+    }
+    .slider {
+        height: auto;
+        min-height: 100%;
+    }
+    .slide {
+        position: unset;
+    }
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+@keyframes slidingLeftAnimation {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: -100%;
+    }
+}
+@keyframes slidingRightAnimation {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: 200%;
+    }
+}
+
