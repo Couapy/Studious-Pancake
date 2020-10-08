@@ -8,9 +8,9 @@ The goal is to don't reinvent the wheel for each projects.
 
 The following list show you what is available :
 
-* Modal system
-* Image preview
-* Loader
-* Menu button
-* ThemeSwitcher
-* Slider
+* [Modal system](https://couapy.github.io/Studious-Pancake/Modal/)
+* [Image preview](https://couapy.github.io/Studious-Pancake/ImagePreview/)
+* [Loader](https://couapy.github.io/Studious-Pancake/Add Loader/)
+* [Menu button](https://couapy.github.io/Studious-Pancake/menu/)
+* [ThemeSwitcher](https://couapy.github.io/Studious-Pancake/ThemeSelector/)
+* [Slider](https://couapy.github.io/Studious-Pancake/Slider/)
